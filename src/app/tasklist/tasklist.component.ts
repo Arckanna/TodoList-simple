@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasklistComponent implements OnInit {
 
+  public items = [{ description: 'exemple1', done: true },
+  { description: 'exemple2', done: false },
+  { description: 'exemple3', done: false },
+  { description: 'exemple4', done: false },]; 
+
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 
