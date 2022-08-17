@@ -1,7 +1,12 @@
 div {
-    padding: 3vh;
+    padding-top: 1vh;    
     background-color: rgba(254, 216, 102, 0.3960784314);
     color: var(--text-regular);    
-    height: 8vh;
-    
+    height: 6vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;     
   }
+  
