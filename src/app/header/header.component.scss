@@ -1,0 +1,11 @@
+
+div {
+    background-color: #fed86665; 
+    color: var(--text-regular);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+    height: 8vh;
+    .logo{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
