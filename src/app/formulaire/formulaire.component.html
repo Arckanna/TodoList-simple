@@ -1,17 +1,58 @@
 <div class="container content">
   <form action="">
-    <label for="todo">Creation des taches : </label>
-    <input #newItem class="lg-text-input" id="todo" />
-    <button type="button" (click)="addItem(newItem.value)">
-      Ajouter une tache
-    </button>
+    <div class="formTodo" *ngIf="condition == true; else elseBlock">
+      <label for="todomodify"
+        >Modification de la tache :
+        <textarea
+          Rows="4"
+          Columns="50"
+          #newItem
+          class="lg-text-input"
+          id="todomodify"
+          [value]="description"
+        ></textarea>
+
+        <button type="button" (click)="modifyItem(newItem.value)">
+          Modifier la tache
+        </button></label
+      >
+    </div>
+    <ng-template #elseBlock>
+      <div class="formTodo">
+        <label for="todo"
+          >Creation des taches :
+          <textarea
+            Rows="4"
+            Columns="50"
+            #newItem
+            class="lg-text-input"
+            id="todo"
+          ></textarea>
+          <button type="button" (click)="addItem(newItem.value)">
+            Ajouter une tache
+          </button></label
+        >
+      </div>
+    </ng-template>
   </form>
 </div>
 <div class="container liste">
   <p>Liste des taches :</p>
   <ul>
     <li *ngFor="let item of items; let index = index">
-      <button (click)="deleteItem(index)">[x]</button
+      <button
+        title="Effacer la tache"
+        type="button"
+        (click)="deleteItem(index)"
+      >
+        <i class="fa-solid fa-trash"></i>
+      </button>
+      <button
+        title="Modifier la tache"
+        type="button"
+        (click)="recupItem(index)"
+      >
+        <i class="fa-solid fa-pencil"></i></button
       ><span>{{ item.description }}</span>
     </li>
   </ul>

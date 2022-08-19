@@ -13,7 +13,7 @@ ul{
 
 //variables
 :root {
-    --font-family:'Spectral', serif;
+    --font-family:'Roboto', sans-serif;
     --primary:#fed766;
     --secondary:#2ab7ca;
     --accent:#fe4a49;
@@ -37,7 +37,7 @@ h1 {
 }
 //layout
 .container{
-    max-width: 1200px;
+    max-width: 800px;
     display: block;
     margin: auto;    
 }
